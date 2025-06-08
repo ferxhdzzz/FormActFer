@@ -146,3 +146,12 @@ body, html {
 .button:hover {
   background-color: #002244; /* Azul aún más oscuro al pasar el mouse */
 }
+.linkk {
+  position: absolute;
+  top: 10px; /* Más arriba que 20px */
+  left: 20px;
+  text-decoration: none;
+  color: #023770;
+  font-weight: bold;
+  transition: color 0.3s;
+}

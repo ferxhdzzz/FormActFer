@@ -18,6 +18,12 @@ const Home = () => {
  return (
   <div className="home-wrapper">
     <div className="home-container">
+        <Link
+        to="/dash"
+        className="linkk"
+      >
+        Volver
+      </Link>
       <Link to="/books" className="div-container">
         Agregar libro
       </Link>

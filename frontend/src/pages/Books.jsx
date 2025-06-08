@@ -21,7 +21,7 @@ const Books = () => {
         to="/home"
         className="linkk"
       >
-        Back To Dashboard
+        Volver
       </Link>
       <form
       onSubmit={handleSubmit}

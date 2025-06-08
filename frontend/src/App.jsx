@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
 import Books from "./pages/Books";
 import { Toaster } from "react-hot-toast";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
           <Route path="/books/:id?" element={<Books />} />
+             <Route path="/dash/:id?" element={<Dashboard />} />
         
         </Routes>
         <Toaster

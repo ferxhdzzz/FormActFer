@@ -10,7 +10,7 @@ const Welcome = () => {
 
   const handleAccept = () => {
     setShowWelcome(false);
-    navigate("/home");
+    navigate("/dash");
   };
 
   if (!showWelcome) return null;
