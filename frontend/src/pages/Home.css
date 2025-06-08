@@ -1,0 +1,148 @@
+/* Home.css */
+
+.home-container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.div-container {
+  display: inline-block;
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: rgb(18, 2, 140);
+  background-color: #ffffff; /* azul oscuro */
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.div-container:hover {
+  background-color: #ffffff;
+}
+
+/* Estilo para el componente Titulo */
+h1, .titulo {
+  font-size: 2rem;
+  color: #000000; /* Título negro */
+  margin-bottom: 10px;
+}
+
+.ppp {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.seccion {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+  background-color: white;
+  display: inline-block;
+  text-align: left;
+}
+
+.seccion-q {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thead-sec {
+  background-color: #e6f0ff;
+}
+
+.sec {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #0056b3;
+  border-bottom: 2px solid #d0e4ff;
+}
+
+.homee {
+  border-bottom: 1px solid #eaeaea;
+  transition: background-color 0.2s ease;
+}
+
+.homee:hover {
+  background-color: #f0f8ff;
+}
+
+.tt-home {
+  padding: 10px 15px;
+  color: #333;
+}
+
+.botones-home {
+  display: flex;
+  gap: 10px;
+  padding: 10px 15px;
+}
+
+/* Puedes usar estas clases en los botones si Button y ButtonDelete permiten className */
+.button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #0056b3;
+}
+
+.button-delete {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #cc0000;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:210vh ;
+  height: 100vh; /* ocupa toda la altura de la pantalla */
+  background-color: #f4f8fc;
+}
+body, html {
+  height: 100%;
+   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background-color: #003366; /* Azul oscuro */
+  color: white;              /* Texto blanco */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.button:hover {
+  background-color: #002244; /* Azul aún más oscuro al pasar el mouse */
+}

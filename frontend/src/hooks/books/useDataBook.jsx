@@ -76,7 +76,7 @@ const useDataBook = (methods) => {
   // dependiendo de si hay un id presente en los parámetros de la URL
   // Si hay un id, se llama a editUser, de lo contrario se llama a saveUserForm
  
-  const handleUserAction = (dataForm) => {
+  const handleBooksAction = (dataForm) => {
     if (id) {
         editBook(dataForm);
     } else {
@@ -89,20 +89,20 @@ const useDataBook = (methods) => {
   // y redirige al usuario a la página de edición del usuario
   // pasando el id del usuario como parámetro en la URL
   const handleUpdateBook = (id) => {
-    navigate(`/users/${id}`);
+    navigate(`/books/${id}`);
   };
  
   // Cargar los datos del usuario por id
   // Esta función se llama para obtener los datos del usuario cuando el componente se monta o cuando cambia el id
   const loadBook = async () => {
     if (id) {
-      const user = await getBookById(id);
-      if (user) {
+      const book = await getBookById(id);
+      if (book) {
         reset({
-          nombre: user?.nombre,
-          apellido: user?.apellido,
-          correo: user?.correo,
-          especialidad: user?.especialidad,
+          stock: book?.stock,
+          precio: book?.precio,
+          producto: book?.producto,
+          categoria: book?.categoria,
         });
       }
     }
@@ -115,7 +115,7 @@ const useDataBook = (methods) => {
  
   return {
     register,
-    handleSubmit: handleSubmit(handleUserAction),
+    handleSubmit: handleSubmit(handleBooksAction),
     errors,
     getBookById,
     handleUpdateBook,

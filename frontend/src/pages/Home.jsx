@@ -6,60 +6,58 @@ import useFecthBooks from "../hooks/books/useFetchBook";
 import { optionSelect } from "../utils/apiUri";
 import useBookAction from "../hooks/books/useBookAction";
 import { use } from "react";
+import "./Home.css";
 
 
 
 const Home = () => {
 
-  const {users, getUsers} = useFecthBooks()
-  const {deleteUser, handleUpdateUser} = useBookAction(getUsers)
+  const {books, getBooks} = useFecthBooks()
+  const {deleteBooks, handleUpdateBook} = useBookAction(getBooks)
 
-  return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Link
-        to="/books"
-        className="text-2xl font-bold text-gray-900 mb-4 bg-green-100 p-2 rounded w-full text-center hover:bg-green-200 transition-colors block mb-6"
-      >
-        Agregar usuario
+ return (
+  <div className="home-wrapper">
+    <div className="home-container">
+      <Link to="/books" className="div-container">
+        Agregar libro
       </Link>
 
-      <Titulo titulo="User Information" />
+      <Titulo titulo="Book Information" />
+      <p className="ppp">Lista de libros registrados.</p>
 
-      <p className="mt-1 text-sm text-gray-600 mb-4">
-        Lista de usuarios registrados.
-      </p>
-
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200 rounded-lg">
-          <thead className="bg-gray-100 text-gray-700 text-left text-sm">
+      <div className="seccion">
+        <table className="seccion-q">
+          <thead className="thead-sec">
             <tr>
-              <th className="px-4 py-2 border-b">Nombre</th>
-              <th className="px-4 py-2 border-b">Apellido</th>
-              <th className="px-4 py-2 border-b">Email</th>
-              <th className="px-4 py-2 border-b">Especialidad</th>
-              <th className="px-4 py-2 border-b">Acciones</th>
+              <th className="sec">Stock</th>
+              <th className="sec">Precio</th>
+              <th className="sec">Producto</th>
+              <th className="sec">Categoria</th>
+              <th className="sec">Acciones</th>
             </tr>
           </thead>
           <tbody>
-            {users?.map((user) => (
-              <tr
-                key={user?.id}
-                className="border-b hover:bg-gray-50 transition-colors"
-              >
-                <td className="px-4 py-2">{user.nombre}</td>
-                <td className="px-4 py-2">{user.apellido}</td>
-                <td className="px-4 py-2">{user.correo}</td>
-                <td className="px-4 py-2">
-                  {optionSelect.find((opt)=> opt.value === user.especialidad)
-                  ?.label || "sin asignar"}
+            {books?.map((book) => (
+              <tr key={book?.id} className="homee">
+                <td className="tt-home">{book.stock}</td>
+                <td className="tt-home">{book.precio}</td>
+                <td className="tt-home">{book.producto}</td>
+                <td className="tt-home">
+                  {
+                    optionSelect.find((opt) => opt.value === book.categoria)
+                      ?.label || "sin asignar"
+                  }
                 </td>
-                <td className="px-4 py-2">
-                  <Button text="Editar"
-                  onClick={()=>handleUpdateUser(user.id)}
+                <td className="botones-home">
+                  <Button
+                    text="Editar"
+                    className="button"
+                    onClick={() => handleUpdateBook(book.id)}
                   />
-
-                  <ButtonDelete text="Eliminar"
-                  onClick={()=>deleteUser(user.id)}
+                  <ButtonDelete
+                    text="Eliminar"
+                    className="button"
+                    onClick={() => deleteBooks(book.id)}
                   />
                 </td>
               </tr>
@@ -68,7 +66,8 @@ const Home = () => {
         </table>
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default Home;

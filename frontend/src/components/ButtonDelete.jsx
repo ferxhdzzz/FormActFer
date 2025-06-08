@@ -3,7 +3,7 @@ const ButtonDelete = ({ type, onClick, text }) => {
       <button
         type={type}
         onClick={onClick}
-        className="delete"
+        className="button"
       >
         {text}
       </button>

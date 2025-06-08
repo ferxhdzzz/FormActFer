@@ -1,0 +1,111 @@
+/* Books.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f8fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del libro (opcional si el body ya hace el centrado) */
+.book-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Card del formulario */
+.nc {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Título en negro */
+.nc h1 {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Subtexto */
+.pbro {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Inputs y select */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Enlace para volver */
+.linkk {
+  position: absolute;
+  top: 10px; /* Más arriba que 20px */
+  left: 20px;
+  text-decoration: none;
+  color: #023770;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.linkk:hover {
+  color: #040bde;
+}
+
+/* Esto alinea los labels dentro del contenedor de inputs */
+.input-container label {
+  display: block;        /* Para que ocupe todo el ancho */
+  text-align: left;      /* Alinea el texto a la izquierda */
+  font-weight: 600;      /* Opcional: para que resalte un poco */
+  margin-bottom: 6px;    /* Espacio entre label y input */
+  color: #333;           /* Color ligeramente oscuro */
+  font-size: 14px;       /* Tamaño legible */
+}
+
+.nc button {
+  background-color: #022a51; /* Azul oscuro */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nc button:hover {
+  background-color: #3f8bd7;
+}
+
+.button {
+  background-color: #023770; /* azul oscuro */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0356a3; /* azul un poco más claro al pasar el mouse */
+}

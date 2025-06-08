@@ -3,7 +3,7 @@ const Button = ({ type, onClick, text }) => {
       <button
         type={type}
         onClick={onClick}
-        className="boton"
+        className="button"
       >
         {text}
       </button>
