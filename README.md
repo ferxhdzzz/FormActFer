@@ -14,39 +14,44 @@ react-hot-toast (notificaciones)
 
 Hooks personalizados
 
-## Estructura del Proyecto
-pgsql
-Copiar
-Editar
-├── public/
-├── src/
-│   ├── components/         → Componentes reutilizables (inputs, botones, títulos, etc.)
-│   ├── hooks/              → Hooks personalizados para manejar datos (fetch, update, etc.)
-│   ├── pages/              → Vistas principales: Home, Books, Welcome, Dashboard
-│   ├── utils/              → Archivos utilitarios (como select options)
-│   ├── App.jsx             → Enrutador principal
-│   ├── index.js            → Punto de entrada de React
-├── package.json
-├── README.md
-## Cómo Ejecutar el Proyecto Localmente
-1. Clona este repositorio
-bash
-Copiar
-Editar
-git clone https://github.com/tu-usuario/nombre-del-repo.git
-cd nombre-del-repo
-2. Instala las dependencias
-bash
-Copiar
-Editar
-npm install
-3. Ejecuta la aplicación
-bash
-Copiar
-Editar
-npm start
-La aplicación se abrirá automáticamente en http://localhost:3000.
 
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/ferxhdzzz/luxepet.git
+```
+
+2. **Instalar dependencias del frontend**
+```bash
+cd frontend
+npm install
+npm run dev  
+```
+
+
+## Estructura del Proyecto
+
+```
+LUXEPET/
+├── backend/
+├── frontend/
+    ├── node_modules/
+    ├── public/
+    ├── src/
+        ├── assets/
+        ├── components/
+        ├── pages/
+        ├── App.css
+        ├── App.jsx
+        ├── index.css
+        ├── main.jsx
+    ├── .gitignore
+    ├── eslint.config.js
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    └── vite.config.js
+```
 ## Configuración del Backend (opcional)
 Este proyecto espera que exista un backend en localhost para conectarse vía fetch (por ejemplo, a rutas como /api/books). Puedes crear un backend con Node.js y MongoDB o usar un servicio simulado con JSON Server.
 
